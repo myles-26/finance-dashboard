@@ -1,0 +1,113 @@
+.settingsPage {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .settingsTitle {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .settingsCard {
+    background-color: var(--card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+  
+  .settingsSection {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .settingItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .settingInfo {
+    flex: 1;
+  }
+  
+  .settingTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  .settingDescription {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 3.5rem;
+    height: 2rem;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--muted);
+    transition: .4s;
+    border-radius: 2rem;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    background-color: var(--background);
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--primary);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(1.5rem);
+  }
+  
+  .signOutButton {
+    padding: 0.5rem 1rem;
+    background-color: var(--destructive);
+    color: var(--destructive-foreground);
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 500;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: color-mix(in srgb, var(--destructive) 90%, black);
+    }
+  }
+    

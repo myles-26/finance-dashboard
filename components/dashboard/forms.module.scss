@@ -1,0 +1,155 @@
+.formContainer {
+  background-color: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  
+  @media (min-width: 640px) {
+    flex-direction: row;
+    
+    .formGroup {
+      flex: 1;
+    }
+  }
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input, .select, .textarea {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  padding-left: 2.5rem;
+  border: 1px solid var(--input);
+  border-radius: var(--radius);
+  background-color: transparent;
+  color: var(--foreground);
+  font-size: 0.875rem;
+  
+  &:focus {
+    outline: none;
+    border-color: var(--ring);
+    box-shadow: 0 0 0 1px var(--ring);
+  }
+  
+  &::placeholder {
+    color: var(--muted-foreground);
+  }
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted-foreground);
+  pointer-events: none;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.radioInput {
+  accent-color: var(--primary);
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.submitButton, .cancelButton {
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+.submitButton {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  
+  &:hover:not(:disabled) {
+    background-color: color-mix(in srgb, var(--primary) 90%, black);
+  }
+}
+
+.cancelButton {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  
+  &:hover:not(:disabled) {
+    background-color: var(--muted);
+  }
+}
+
+.errorMessage {
+  background-color: color-mix(in srgb, var(--destructive) 15%, transparent);
+  color: var(--destructive);
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}

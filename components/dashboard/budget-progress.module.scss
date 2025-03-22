@@ -1,0 +1,99 @@
+.budgetCard {
+    background-color: var(--card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 1.25rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+  
+  .budgetHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .budgetIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    background-color: var(--muted);
+    color: var(--foreground);
+  }
+  
+  .budgetInfo {
+    flex: 1;
+  }
+  
+  .budgetCategory {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  .budgetAmount {
+    font-size: 0.75rem;
+    
+    .spent {
+      font-weight: 600;
+    }
+    
+    .total {
+      color: var(--muted-foreground);
+    }
+  }
+  
+  .progressContainer {
+    height: 0.5rem;
+    background-color: var(--muted);
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+  }
+  
+  .progressBar {
+    height: 100%;
+    border-radius: 9999px;
+    
+    &.good {
+      background-color: rgb(34, 197, 94);
+    }
+    
+    &.warning {
+      background-color: rgb(234, 179, 8);
+    }
+    
+    &.danger {
+      background-color: rgb(239, 68, 68);
+    }
+  }
+  
+  .budgetFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .remaining {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .remainingLabel {
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+  }
+  
+  .remainingAmount {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  
+  .percentage {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  
