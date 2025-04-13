@@ -31,6 +31,9 @@ export function ExpenseChart({ data }: ExpenseChartProps) {
     }
     return null
   }
+  if (!data || data.length === 0) {
+    return <p>No data available for this month.</p>
+  }
 
   return (
     <div className={styles.chartContainer}>
@@ -48,4 +51,3 @@ export function ExpenseChart({ data }: ExpenseChartProps) {
     </div>
   )
 }
-
